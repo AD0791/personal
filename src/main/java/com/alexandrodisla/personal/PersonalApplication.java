@@ -16,5 +16,7 @@ public class PersonalApplication {
 	}
 
 	@GetMapping("/")
-	public String greet(){return "Hello Rest spring";}
+	public GreetResponse greet(){return new GreetResponse("Hello Rest spring");}
+
+	record GreetResponse(String greet){}
 }
