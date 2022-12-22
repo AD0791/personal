@@ -1,8 +1,20 @@
 package com.alexandrodisla.personal;
 
+import jakarta.persistence.*;
+
 import java.util.Objects;
 
+@Entity
 public class Student {
+    @Id
+    @SequenceGenerator(
+            name = "student_id_sequence",
+            sequenceName = "student_id_sequence"
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "student_id_sequence"
+    )
     private Integer id;
     private String name;
     private String email;
