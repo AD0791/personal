@@ -20,3 +20,4 @@ public class PersonalApplication {
 
 	record GreetResponse(String greet){}
 }
+
