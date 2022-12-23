@@ -9,7 +9,8 @@ public class Student {
     @Id
     @SequenceGenerator(
             name = "student_id_sequence",
-            sequenceName = "student_id_sequence"
+            sequenceName = "student_id_sequence",
+            allocationSize = 1
     )
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
